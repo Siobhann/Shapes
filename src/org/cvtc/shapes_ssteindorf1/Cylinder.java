@@ -32,7 +32,11 @@ public class Cylinder extends Shape {
 	}
 
 	// Constructor
-	public Cylinder(float height, float radius) {
+	public Cylinder(float height, float radius) throws IllegalArgumentException {
+		if(height <=0 || radius <= 0.0) {
+			throw new IllegalArgumentException("Number can not be less than or equal to 0");
+		}
+		
 		setHeight(height);
 		setRadius(radius);
 	}

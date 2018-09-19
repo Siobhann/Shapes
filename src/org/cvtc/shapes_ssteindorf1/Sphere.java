@@ -23,7 +23,11 @@ public class Sphere extends Shape {
 	}
 
 	// Constructor - pass the values from the main method - ShapesTest - to set these dimensions
-	public Sphere(float radius) {
+	public Sphere(float radius) throws IllegalArgumentException {
+		if(radius <= 0.0) {
+			throw new IllegalArgumentException("Number can not be less than or equal to 0");
+		}
+		
 		setRadius(radius);
 	}
 

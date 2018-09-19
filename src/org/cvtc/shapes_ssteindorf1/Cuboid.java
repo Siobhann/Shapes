@@ -47,7 +47,10 @@ public class Cuboid extends Shape {
 
 
 	// Constructor - pass the values from the main method - ShapesTest - to set these dimensions 
-	public Cuboid(float width, float height, float depth) {
+	public Cuboid(float width, float height, float depth) throws IllegalArgumentException {
+		if(width <= 0 || height <=0 || depth <= 0.0) {
+			throw new IllegalArgumentException("Number can not be less than or equal to 0");
+		}
 		setWidth(width);
 		setHeight(height);
 		setDepth(depth);

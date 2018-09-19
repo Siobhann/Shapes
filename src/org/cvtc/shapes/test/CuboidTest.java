@@ -16,12 +16,9 @@ public class CuboidTest {
 
 	@Test
 	public void testVolume() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testRender() {
-		fail("Not yet implemented");
+		Cuboid cube1 = new Cuboid(6, 5, 1);
+		assertEquals(30, cube1.volume(), 0.0002);
+		
 	}
 
 	@Test
@@ -32,16 +29,18 @@ public class CuboidTest {
 
 	@Test
 	public void testGetHeight() {
-		fail("Not yet implemented");
+		Cuboid cube1 = new Cuboid(1,2,2);
+		assertEquals(2, cube1.getHeight(), 0.0002);
 	}
 
 	@Test
 	public void testGetDepth() {
-		fail("Not yet implemented");
+		Cuboid cube1 = new Cuboid(1,2,2);
+		assertEquals(2, cube1.getDepth(), 0.0002);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testCuboid() {
-		Cuboid cube1 = new Cuboid(-1,2,3);
+		Cuboid cube1 = new Cuboid(0,2,3);
 	}
 }
